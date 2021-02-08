@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameDemo.Entites
+namespace GameDemo.Abstract
 {
-    interface IEntity
+    internal interface IEntity
     {
     }
 }

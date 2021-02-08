@@ -1,9 +1,9 @@
-﻿using GameDemo.Entites;
+﻿using GameDemo.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameDemo.Concrete
+namespace GameDemo.Entites
 {
     internal class Gamer : IEntity
     {
