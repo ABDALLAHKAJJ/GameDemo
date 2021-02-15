@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameDemo.Objects
 {
-    internal class Player2 : Gamer
+    public class Player2 : Gamer
     {
     }
 }

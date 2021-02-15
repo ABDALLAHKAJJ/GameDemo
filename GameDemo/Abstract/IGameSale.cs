@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameDemo.Abstract
 {
-    internal interface GameSale
+    public interface IGameSale
     {
         bool SaleGame(Game game, Gamer gamer);
 

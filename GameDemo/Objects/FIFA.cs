@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameDemo.Objects
 {
-    internal class FIFA : Game
+    public class FIFA : Game
     {
     }
 }

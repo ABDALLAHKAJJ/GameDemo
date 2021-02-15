@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameDemo.Abstract
 {
-    internal class Campaign
+    public interface Campaign
     {
         public int Id { get; set; }
         public string Name { get; set; }

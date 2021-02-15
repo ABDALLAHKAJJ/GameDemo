@@ -7,7 +7,7 @@ using System.Text;
 
 namespace GameDemo.Adapter
 {
-    internal class GamerCheckManager : IGamerCheckService
+    public class GamerCheckManager : IGamerCheckService
     {
         public bool ChechIfRealPerson(Gamer gamer)
         {
