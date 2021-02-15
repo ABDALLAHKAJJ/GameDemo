@@ -1,4 +1,5 @@
 ﻿using GameDemo.Abstract;
+using GameDemo.Entites;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,21 +8,21 @@ namespace GameDemo.Concrete
 {
     internal class CampaignManager : ICampaign
     {
-        public bool AddCampaign(string name, string details)
+        public bool AddCampaign(Campaign campaign)
         {
-            Console.WriteLine($"{name} added with deitals: {details}");
+            Console.WriteLine($"{campaign.Name} added with deitals: {campaign.Details}");
             return true;
         }
 
-        public bool DeleteCampaign(int campaignId)
+        public bool DeleteCampaign(Campaign campaign)
         {
-            Console.WriteLine($"{campaignId} deleted");
+            Console.WriteLine($"{campaign.Name} deleted");
             return true;
         }
 
-        public bool UpdateCampaign(int id, string details)
+        public bool UpdateCampaign(Campaign campaign, string details)
         {
-            Console.WriteLine($"{id} updated with deitals: {details}");
+            Console.WriteLine($"{campaign.Id} updated with deitals: {details}");
             return true;
         }
     }

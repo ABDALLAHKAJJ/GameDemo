@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDemo.Entites;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,10 +7,10 @@ namespace GameDemo.Abstract
 {
     public interface ICampaign
     {
-        bool AddCampaign(string name, string details);
+        bool AddCampaign(Campaign campaign);
 
-        bool DeleteCampaign(int campaignId);
+        bool DeleteCampaign(Campaign campaign);
 
-        bool UpdateCampaign(int id, string details);
+        bool UpdateCampaign(Campaign campaign, string details);
     }
 }

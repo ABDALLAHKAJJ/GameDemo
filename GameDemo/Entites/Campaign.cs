@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameDemo.Entites
 {
-    internal class Campaign : IEntity
+    public class Campaign : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
