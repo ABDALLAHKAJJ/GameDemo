@@ -14,10 +14,16 @@ namespace GameDemo.Concrete
             return true;
         }
 
-        public bool SaleGame(Game game, Gamer gamer)
+        public bool SaleGame(Game game, Gamer gamer, params Campaign[] campaign)
         {
-            Console.WriteLine($"{game.Name} sold to {gamer.FirstName}");
+            Console.WriteLine($"{game.Name} sold to {gamer.FirstName}" +
+                (campaign.Length > 0 ? $", and {campaign[0].Name} added " : )); ;
             return true;
+        }
+
+        public bool SaleGame(Game game, Gamer gamer, params ICampaign[] campaign)
+        {
+            throw new NotImplementedException();
         }
     }
 }
