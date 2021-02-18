@@ -25,9 +25,8 @@ namespace GameDemo
                 Level = 99
             };
 
-            GamerCheckManager gamerCheckManager = new GamerCheckManager();
-            bool isValid = gamerCheckManager.ChechIfRealPerson(player2);
-            Console.WriteLine(isValid ? "Real person" : "Not real person");
+            GamerManager gamerManager = new GamerManager(new GamerCheckManager());
+            bool isValid = gamerManager.Add(player2);
 
             Campaign campaign = new Campaign()
             {

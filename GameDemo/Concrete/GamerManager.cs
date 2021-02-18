@@ -8,10 +8,25 @@ namespace GameDemo.Concrete
 {
     public class GamerManager : ICustomerService
     {
+        private readonly IGamerCheckService _gamerCheckService;
+
+        public GamerManager(IGamerCheckService gamerCheckService)
+        {
+            _gamerCheckService = gamerCheckService;
+        }
+
         public bool Add(Gamer gamer)
         {
-            Console.WriteLine(gamer.FirstName + " Added to database");
-            return true;
+            if (_gamerCheckService.ChechIfRealPerson(gamer))
+            {
+                Console.WriteLine(gamer.FirstName + " Added to database");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Not real person");
+                return false;
+            }
         }
 
         public bool ChangeFirstName(Gamer gamer, string newName)
